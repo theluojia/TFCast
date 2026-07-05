@@ -1,0 +1,8520 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>变形金刚 G1 时代人物出场映射表</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;background:#0d1117;color:#c9d1d9;font-size:13px}
+#stickyRoot{position:sticky;top:0;z-index:200}
+.topbar{background:#161b22;color:#f0f6fc;padding:20px 24px 16px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.8);border-bottom:3px solid #e31837}
+.topbar h1{font-size:26px;letter-spacing:2px;margin-bottom:4px}
+.topbar p{font-size:13px;opacity:.8}
+.controls{display:flex;gap:10px;padding:10px 20px;background:#161b22;flex-wrap:wrap;align-items:center;border-bottom:1px solid #30363d}
+.controls input,.controls select{padding:7px 12px;border-radius:6px;border:1px solid #30363d;background:#0d1117;color:#c9d1d9;font-size:13px;outline:none}
+.controls input:focus,.controls select:focus{border-color:#58a6ff}
+.controls input{width:220px}
+.controls input::placeholder{color:#484f58}
+.stats{margin-left:auto;color:#8b949e;font-size:12px;white-space:nowrap}
+.legend{display:flex;gap:10px;align-items:center;font-size:11px;color:#8b949e}
+.legend .dot{display:inline-block;width:10px;height:10px;border-radius:2px;background:#21262d;border:1px solid #30363d}
+.legend .dot.mk{background:#3fb950;border-color:#3fb950}
+#headWrap{overflow:hidden}
+#bodyWrap{overflow-x:auto;padding-bottom:20px}
+table{border-collapse:separate;border-spacing:0;table-layout:fixed;width:1521px}
+#ht thead th{background:#0d1117;color:#8b949e;padding:4px 2px;text-align:center;border:1px solid #21262d;vertical-align:middle;word-break:break-all;line-height:1.2}
+#ht thead tr:first-child th{font-size:11px;font-weight:600;border-bottom:2px solid #30363d}
+#ht thead tr:last-child th{background:#161b22;font-size:10px;font-weight:400}
+#bt tbody td{padding:4px 5px;border:1px solid #21262d;text-align:center;white-space:nowrap;font-size:12px;background:#0d1117}
+#bt tbody td.nm{text-align:left;font-weight:600;color:#f0f6fc;position:sticky;left:0;z-index:3;border-right:2px solid #30363d;overflow:hidden;text-overflow:ellipsis}
+#bt tbody td.cn{text-align:left;color:#8b949e;position:sticky;left:120px;z-index:3;overflow:hidden;text-overflow:ellipsis}
+#bt tbody td.mk{color:#3fb950;font-weight:700}
+#bt tbody td.nt{color:#f0883e;font-size:10px;text-align:left;white-space:normal;overflow:hidden}
+.auto td{background:rgba(56,139,253,0.04)}.auto td.nm,.auto td.cn{background:rgba(56,139,253,0.06)}
+.dec td{background:rgba(248,81,73,0.04)}.dec td.nm,.dec td.cn{background:rgba(248,81,73,0.06)}
+tr:hover td{background:rgba(255,255,255,0.08)!important}
+tr:hover td.nm,tr:hover td.cn{background:rgba(255,255,255,0.12)!important}
+.footer{text-align:center;padding:16px;color:#484f58;font-size:11px;border-top:1px solid #21262d}
+.footer a{color:#f0883e;text-decoration:none}
+.footer a:hover{color:#f0f6fc}
+</style></head><body>
+
+<div id="stickyRoot">
+<div class="topbar">
+<h1><img src="logo.png" style="height:36px;vertical-align:middle;margin-right:12px;background:#fff;padding:6px 16px;border-radius:8px">变形金刚 G1 时代 — 人物出场映射表</h1>
+<p>美版 G1 动画 · 日版 G1 动画 · Dreamwave · IDW · Skybound | 数据来源: TFWiki.net | 上译中文名</p>
+</div>
+<div class="controls">
+<input type="text" id="search" placeholder="🔍 搜索角色名/中文名..." oninput="filterTable()">
+<select id="fFilter" onchange="filterTable()"><option value="">全部派别</option><option value="博派">博派 (Autobot)</option><option value="狂派">狂派 (Decepticon)</option></select>
+<select id="mFilter" onchange="filterTable()"><option value="">全部系列出场</option>
+<option value="S1">S1</option>
+<option value="S2">S2</option>
+<option value="MOV">电影/S3</option>
+<option value="S4">S4</option>
+<option value="HM">头领战士</option>
+<option value="MF">隐者战士</option>
+<option value="V">胜利之斗争</option>
+<option value="Z">地带</option>
+<option value="DW:TWW">内战(TWW)</option>
+<option value="DW:G1">G1</option>
+<option value="DW:MM">微型战士</option>
+<option value="IDW:AT">-ations</option>
+<option value="IDW:AHM">AHM</option>
+<option value="IDW:OG">Ongoing</option>
+<option value="IDW:LS">LSOTW</option>
+<option value="IDW:MT">MTMTE</option>
+<option value="IDW:RI">RID</option>
+<option value="IDW:WB">Wind- blade</option>
+<option value="IDW:LL">Lost Light</option>
+<option value="IDW:OP">OP</option>
+<option value="IDW:UN">Unicron</option>
+<option value="SB">SB</option>
+</select>
+<div class="legend"><span class="dot mk"></span>出场<span class="dot"></span>未出场</div>
+<a href="https://github.com/theluojia/TFCast/issues/new" target="_blank" style="color:#f0883e;text-decoration:none;font-size:12px;padding:5px 12px;border:1px solid #f0883e;border-radius:6px;margin-left:auto;margin-right:10px;white-space:nowrap">✏️ 提交勘误</a>
+<div class="stats" id="stats">共 320 名角色</div>
+</div>
+<div id="headWrap">
+<table id="ht">
+<colgroup>
+<col style="width:120px">
+<col style="width:72px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:65px">
+<col style="width:130px">
+</colgroup>
+<thead><tr>
+<th style="width:120px">英文名</th><th style="width:72px">上译中文名</th>
+<th colspan="4">美版 G1 动画</th>
+<th colspan="4">日版 G1 动画</th>
+<th colspan="3">Dreamwave</th>
+<th colspan="10">IDW 2005</th>
+<th colspan="1">Skybound</th>
+<th style="width:130px">备注</th></tr>
+<tr>
+<th>英文名</th><th>上译中文名</th>
+<th>S1</th>
+<th>S2</th>
+<th>电影/S3</th>
+<th>S4</th>
+<th>头领战士</th>
+<th>隐者战士</th>
+<th>胜利之斗争</th>
+<th>地带</th>
+<th>内战(TWW)</th>
+<th>G1</th>
+<th>微型战士</th>
+<th>-ations</th>
+<th>AHM</th>
+<th>Ongoing</th>
+<th>LSOTW</th>
+<th>MTMTE</th>
+<th>RID</th>
+<th>Wind-
+blade</th>
+<th>Lost
+Light</th>
+<th>OP</th>
+<th>Unicron</th>
+<th>SB</th>
+<th></th></tr></thead>
+</table>
+</div>
+</div>
+
+<div id="bodyWrap">
+<table id="bt">
+<colgroup>
+<col style="width:120px">
+<col style="width:72px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:54px">
+<col style="width:65px">
+<col style="width:130px">
+</colgroup>
+<tbody><tr class="dec">
+<td class="nm" title="Abominus">Abominus</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Acid Storm">Acid Storm</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Apeface">Apeface</td>
+<td class="cn" title="猿面">猿面</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Astrotrain">Astrotrain</td>
+<td class="cn" title="大火车">大火车</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Battletrap">Battletrap</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Beastbox">Beastbox</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Bitstream">Bitstream</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Black Shadow">Black Shadow</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Blast Off">Blast Off</td>
+<td class="cn" title="爆炸">爆炸</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Blitzwing">Blitzwing</td>
+<td class="cn" title="闪电">闪电</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Blood">Blood</td>
+<td class="cn" title="魔血">魔血</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Blot">Blot</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Bludgeon">Bludgeon</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Blue Bacchus">Blue Bacchus</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Bombshell">Bombshell</td>
+<td class="cn" title="炸弹">炸弹</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Bonecrusher">Bonecrusher</td>
+<td class="cn" title="推土机">推土机</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Brawl">Brawl</td>
+<td class="cn" title="吵闹">吵闹</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Breakdown">Breakdown</td>
+<td class="cn" title="打击">打击</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Browning">Browning</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Bruticus">Bruticus</td>
+<td class="cn" title="混天豹">混天豹</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Bullhorn (robot)">Bullhorn (robot)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Buster">Buster</td>
+<td class="cn" title="巴斯特">巴斯特</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">日版隐者战士独有</td></tr>
+<tr class="dec">
+<td class="nm" title="Buzzsaw">Buzzsaw</td>
+<td class="cn" title="圆锯鸟">圆锯鸟</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Cancer (robot)">Cancer (robot)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Carnivac">Carnivac</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Chop Shop">Chop Shop</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Counterpunch">Counterpunch</td>
+<td class="cn" title="反击">反击</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Crankcase">Crankcase</td>
+<td class="cn" title="曲轴箱">曲轴箱</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Cutthroat">Cutthroat</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Cyclonus">Cyclonus</td>
+<td class="cn" title="狂飙">狂飙</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Dauros">Dauros</td>
+<td class="cn" title="道罗斯">道罗斯</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Dead End">Dead End</td>
+<td class="cn" title="封锁">封锁</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Deathsaurus">Deathsaurus</td>
+<td class="cn" title="死神萨拉斯">死神萨拉斯</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Decepticon desperadoes">Decepticon desperadoes</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Devastator">Devastator</td>
+<td class="cn" title="大力神">大力神</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Dirge">Dirge</td>
+<td class="cn" title="挽歌">挽歌</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Divebomb">Divebomb</td>
+<td class="cn" title="大鹏">大鹏</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Drag Strip">Drag Strip</td>
+<td class="cn" title="抢劫">抢劫</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Drillhorn">Drillhorn</td>
+<td class="cn" title="钻角犀">钻角犀</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Flywheels">Flywheels</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Frenzy">Frenzy</td>
+<td class="cn" title="迷乱">迷乱</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Fulcrum">Fulcrum</td>
+<td class="cn" title="支点">支点</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Galvatron">Galvatron</td>
+<td class="cn" title="惊破天">惊破天</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Gilmer">Gilmer</td>
+<td class="cn" title="基尔默">基尔默</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">日版隐者战士独有</td></tr>
+<tr class="dec">
+<td class="nm" title="Guardminder">Guardminder</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Guyhawk">Guyhawk</td>
+<td class="cn" title="盖伊豪克">盖伊豪克</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Headstrong">Headstrong</td>
+<td class="cn" title="铁头">铁头</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Hellbat">Hellbat</td>
+<td class="cn" title="地狱蝙蝠">地狱蝙蝠</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Hook">Hook</td>
+<td class="cn" title="吊钩">吊钩</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Hotlink">Hotlink</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Hun-Gurrr">Hun-Gurrr</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Hydra">Hydra</td>
+<td class="cn" title="海德拉">海德拉</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">日版隐者战士独有</td></tr>
+<tr class="dec">
+<td class="nm" title="Iguanus">Iguanus</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Jallguar">Jallguar</td>
+<td class="cn" title="贾古阿">贾古阿</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Kickback">Kickback</td>
+<td class="cn" title="反冲">反冲</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Killbison">Killbison</td>
+<td class="cn" title="杀牛">杀牛</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="King Poseidon">King Poseidon</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Krok">Krok</td>
+<td class="cn" title="克罗克">克罗克</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Laserbeak">Laserbeak</td>
+<td class="cn" title="激光鸟">激光鸟</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Leozack">Leozack</td>
+<td class="cn" title="利奥扎克">利奥扎克</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Liokaiser">Liokaiser</td>
+<td class="cn" title="狮王凯撒">狮王凯撒</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Lockdown">Lockdown</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Long Haul">Long Haul</td>
+<td class="cn" title="拖斗">拖斗</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Lugnut (TF 2010)">Lugnut (TF 2010)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Menasor">Menasor</td>
+<td class="cn" title="飞天虎">飞天虎</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Mindwipe">Mindwipe</td>
+<td class="cn" title="蝙蝠魔">蝙蝠魔</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Misfire">Misfire</td>
+<td class="cn" title="火炭">火炭</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Mixmaster">Mixmaster</td>
+<td class="cn" title="搅拌机">搅拌机</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Motormaster">Motormaster</td>
+<td class="cn" title="汽车大师">汽车大师</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Octane">Octane</td>
+<td class="cn" title="毒气弹">毒气弹</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Octopunch">Octopunch</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Onslaught">Onslaught</td>
+<td class="cn" title="袭击">袭击</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Optimus Prime clone">Optimus Prime clone</td>
+<td class="cn" title="擎天柱克隆体">擎天柱克隆体</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">美版G1独有</td></tr>
+<tr class="dec">
+<td class="nm" title="Overkill">Overkill</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Overlord">Overlord</td>
+<td class="cn" title="霸王">霸王</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Pounce">Pounce</td>
+<td class="cn" title="突击">突击</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Predaking">Predaking</td>
+<td class="cn" title="冲云霄">冲云霄</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Ramjet">Ramjet</td>
+<td class="cn" title="喷气机">喷气机</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Rampage">Rampage</td>
+<td class="cn" title="猛虎">猛虎</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Ratbat">Ratbat</td>
+<td class="cn" title="蝙蝠精">蝙蝠精</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Ravage">Ravage</td>
+<td class="cn" title="机器狗">机器狗</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Razorclaw">Razorclaw</td>
+<td class="cn" title="利爪">利爪</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Reflector">Reflector</td>
+<td class="cn" title="照相机">照相机</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Rippersnapper">Rippersnapper</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Rumble">Rumble</td>
+<td class="cn" title="轰隆隆">轰隆隆</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Runabout">Runabout</td>
+<td class="cn" title="飞轮">飞轮</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Runamuck">Runamuck</td>
+<td class="cn" title="游民">游民</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Scavenger">Scavenger</td>
+<td class="cn" title="清扫机">清扫机</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Scorponok">Scorponok</td>
+<td class="cn" title="撒克巨人">撒克巨人</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Scourge">Scourge</td>
+<td class="cn" title="瘟疫">瘟疫</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Scrapper">Scrapper</td>
+<td class="cn" title="铲土机">铲土机</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Shockwave">Shockwave</td>
+<td class="cn" title="震荡波">震荡波</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Shrapnel">Shrapnel</td>
+<td class="cn" title="弹片">弹片</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Sinnertwin">Sinnertwin</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Skullcruncher">Skullcruncher</td>
+<td class="cn" title="鳄龙">鳄龙</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Skywarp">Skywarp</td>
+<td class="cn" title="闹翻天">闹翻天</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Slugfest">Slugfest</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Slugslinger">Slugslinger</td>
+<td class="cn" title="吊索">吊索</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Snapdragon">Snapdragon</td>
+<td class="cn" title="狂龙">狂龙</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Snarler">Snarler</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Soundblaster">Soundblaster</td>
+<td class="cn" title="音板">音板</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">DW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Soundwave">Soundwave</td>
+<td class="cn" title="声波">声波</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Spinister">Spinister</td>
+<td class="cn" title="旋翼">旋翼</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Squawktalk">Squawktalk</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Starscream">Starscream</td>
+<td class="cn" title="红蜘蛛">红蜘蛛</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Stranglehold">Stranglehold</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Straxus">Straxus</td>
+<td class="cn" title="斯塔萨斯">斯塔萨斯</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt">Skybound原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Sunstorm">Sunstorm</td>
+<td class="cn" title="太阳风">太阳风</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Swindle">Swindle</td>
+<td class="cn" title="诈骗">诈骗</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Tantrum">Tantrum</td>
+<td class="cn" title="野牛">野牛</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="The Fallen">The Fallen</td>
+<td class="cn" title="堕落金刚">堕落金刚</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt">Skybound原创</td></tr>
+<tr class="dec">
+<td class="nm" title="Thrust">Thrust</td>
+<td class="cn" title="推进器">推进器</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Trannis">Trannis</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Triggerhappy">Triggerhappy</td>
+<td class="cn" title="板机">板机</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Trypticon">Trypticon</td>
+<td class="cn" title="铁甲龙">铁甲龙</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Venom">Venom</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Vortex">Vortex</td>
+<td class="cn" title="螺旋桨">螺旋桨</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Weirdwolf">Weirdwolf</td>
+<td class="cn" title="人狼">人狼</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Wilder (robot)">Wilder (robot)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Wildrider">Wildrider</td>
+<td class="cn" title="莽撞">莽撞</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="dec">
+<td class="nm" title="Wingspan">Wingspan</td>
+<td class="cn" title="飞翔">飞翔</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Aimless">Aimless</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Ambulon">Ambulon</td>
+<td class="cn" title="安布隆">安布隆</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Blaze Master">Blaze Master</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Blowpipe">Blowpipe</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Brainstorm">Brainstorm</td>
+<td class="cn" title="小诸葛">小诸葛</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Caliburst">Caliburst</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Clouder">Clouder</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Crankshot">Crankshot</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Grotusque">Grotusque</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Gyronian Sentry">Gyronian Sentry</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Jetfire">Jetfire</td>
+<td class="cn" title="天火">天火</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Megatron">Megatron</td>
+<td class="cn" title="威震天">威震天</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Punch">Punch</td>
+<td class="cn" title="出击">出击</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Sixshot">Sixshot</td>
+<td class="cn" title="六面兽">六面兽</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Solon Kitakaze">Solon Kitakaze</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Swift">Swift</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Thundercracker">Thundercracker</td>
+<td class="cn" title="惊天雷">惊天雷</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="">
+<td class="nm" title="Valve">Valve</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Afterburner">Afterburner</td>
+<td class="cn" title="烙铁">烙铁</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Aileron">Aileron</td>
+<td class="cn" title="副翼">副翼</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Air Raid">Air Raid</td>
+<td class="cn" title="空袭">空袭</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Alpha Trion">Alpha Trion</td>
+<td class="cn" title=""></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Aquastar">Aquastar</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Arcee">Arcee</td>
+<td class="cn" title="阿尔茜">阿尔茜</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Backstreet">Backstreet</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Beachcomber">Beachcomber</td>
+<td class="cn" title="巨浪">巨浪</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Blades">Blades</td>
+<td class="cn" title="刀刃">刀刃</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Blaster">Blaster</td>
+<td class="cn" title="录音机">录音机</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Bluestreak">Bluestreak</td>
+<td class="cn" title="蓝霹雳">蓝霹雳</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Blurr">Blurr</td>
+<td class="cn" title="啰嗦">啰嗦</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Boater">Boater</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Braver">Braver</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Brawn">Brawn</td>
+<td class="cn" title="大汉">大汉</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Broadside">Broadside</td>
+<td class="cn" title="排炮">排炮</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Bulkhead">Bulkhead</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Bumblebee">Bumblebee</td>
+<td class="cn" title="大黄蜂">大黄蜂</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Bumper">Bumper</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Cerebros">Cerebros</td>
+<td class="cn" title="福特">福特</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Chase">Chase</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Chromedome">Chromedome</td>
+<td class="cn" title="郭文">郭文</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Chromia">Chromia</td>
+<td class="cn" title=""></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Cliffjumper">Cliffjumper</td>
+<td class="cn" title="飞过山">飞过山</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Cloudburst">Cloudburst</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Cloudraker">Cloudraker</td>
+<td class="cn" title="腾云">腾云</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Computron">Computron</td>
+<td class="cn" title="计算王">计算王</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Cosmos">Cosmos</td>
+<td class="cn" title="宇宙飞碟">宇宙飞碟</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Countdown">Countdown</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Cromar">Cromar</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Crosshairs">Crosshairs</td>
+<td class="cn" title="克罗斯">克罗斯</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Dai Atlas">Dai Atlas</td>
+<td class="cn" title="大阿特拉斯">大阿特拉斯</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">日版地带独有</td></tr>
+<tr class="auto">
+<td class="nm" title="Defensor">Defensor</td>
+<td class="cn" title="守护神">守护神</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Delta Magnus">Delta Magnus</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Dipstick">Dipstick</td>
+<td class="cn" title="油尺">油尺</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Diver">Diver</td>
+<td class="cn" title="潜水员">潜水员</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Doublecross">Doublecross</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Downshift">Downshift</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Drift">Drift</td>
+<td class="cn" title="漂移">漂移</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Eject">Eject</td>
+<td class="cn" title="弹出">弹出</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Electro">Electro</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Elita One">Elita One</td>
+<td class="cn" title=""></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Fastlane">Fastlane</td>
+<td class="cn" title="快车道">快车道</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Fire">Fire</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Fireflight">Fireflight</td>
+<td class="cn" title="飞火">飞火</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Firestar">Firestar</td>
+<td class="cn" title=""></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="First Aid">First Aid</td>
+<td class="cn" title="急救员">急救员</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Fixit">Fixit</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Fortress Maximus">Fortress Maximus</td>
+<td class="cn" title="巨无霸福特">巨无霸福特</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Free Wheeler">Free Wheeler</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Freeway">Freeway</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Galaxy Shuttle">Galaxy Shuttle</td>
+<td class="cn" title="银河穿梭机">银河穿梭机</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Gears">Gears</td>
+<td class="cn" title="变速箱">变速箱</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Getsuei">Getsuei</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Ginrai (human)">Ginrai (human)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Ginrai (robot)">Ginrai (robot)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Gizmo">Gizmo</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Grand Maximus">Grand Maximus</td>
+<td class="cn" title="格兰">格兰</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Grapple">Grapple</td>
+<td class="cn" title="吊车">吊车</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Greatshot">Greatshot</td>
+<td class="cn" title="巨炮">巨炮</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Grimlock">Grimlock</td>
+<td class="cn" title="钢锁">钢锁</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Groove">Groove</td>
+<td class="cn" title="车辙">车辙</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Guardian robot">Guardian robot</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Guzzle">Guzzle</td>
+<td class="cn" title="豪饮">豪饮</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Hardhead">Hardhead</td>
+<td class="cn" title="老顽固">老顽固</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Highbrow">Highbrow</td>
+<td class="cn" title="海龙">海龙</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Hoist">Hoist</td>
+<td class="cn" title="滑车">滑车</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Holi">Holi</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Hot Rod">Hot Rod</td>
+<td class="cn" title="热破">热破</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Hot Spot">Hot Spot</td>
+<td class="cn" title="热点">热点</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Hound">Hound</td>
+<td class="cn" title="探长">探长</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Hubcap">Hubcap</td>
+<td class="cn" title="轮踏盖">轮踏盖</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Huffer">Huffer</td>
+<td class="cn" title="鲁莽">鲁莽</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Impactor">Impactor</td>
+<td class="cn" title="冲击">冲击</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Inferno">Inferno</td>
+<td class="cn" title="消防车">消防车</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Ironfist">Ironfist</td>
+<td class="cn" title="铁拳">铁拳</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Ironhide">Ironhide</td>
+<td class="cn" title="铁皮">铁皮</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Jazz">Jazz</td>
+<td class="cn" title="爵士">爵士</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Kaen">Kaen</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Kup">Kup</td>
+<td class="cn" title="杯子">杯子</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Lander">Lander</td>
+<td class="cn" title="兰特">兰特</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Laster">Laster</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Lightfoot">Lightfoot</td>
+<td class="cn" title="捷飞">捷飞</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">日版隐者战士独有</td></tr>
+<tr class="auto">
+<td class="nm" title="Lightfoot (robot)">Lightfoot (robot)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Lightspeed (G1 Technobot)">Lightspeed (G1 Technobot)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Longtooth">Longtooth</td>
+<td class="cn" title="长牙">长牙</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">日版隐者战士独有</td></tr>
+<tr class="auto">
+<td class="nm" title="Metalhawk">Metalhawk</td>
+<td class="cn" title="金属隼">金属隼</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Metroplex">Metroplex</td>
+<td class="cn" title="猛大帅">猛大帅</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Minerva (G1 robot)">Minerva (G1 robot)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Mirage">Mirage</td>
+<td class="cn" title="幻影">幻影</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Moonracer">Moonracer</td>
+<td class="cn" title=""></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Nautica">Nautica</td>
+<td class="cn" title="诺蒂卡">诺蒂卡</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Nosecone">Nosecone</td>
+<td class="cn" title="钻探机">钻探机</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Omega Supreme">Omega Supreme</td>
+<td class="cn" title="大力金刚">大力金刚</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Optimus Prime">Optimus Prime</td>
+<td class="cn" title="擎天柱">擎天柱</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Outback">Outback</td>
+<td class="cn" title="腹地">腹地</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Overdrive">Overdrive</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Peacemaker">Peacemaker</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Perceptor">Perceptor</td>
+<td class="cn" title="感知器">感知器</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Pharma">Pharma</td>
+<td class="cn" title="法玛">法玛</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Pinpointer">Pinpointer</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Pipes">Pipes</td>
+<td class="cn" title="管子">管子</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Pīpō">Pīpō</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Pointblank">Pointblank</td>
+<td class="cn" title="布兰卡">布兰卡</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Powerglide">Powerglide</td>
+<td class="cn" title="滑翔机">滑翔机</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Prowl">Prowl</td>
+<td class="cn" title="警车">警车</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Pyra Magna">Pyra Magna</td>
+<td class="cn" title="派拉·麦格纳">派拉·麦格纳</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Pyro">Pyro</td>
+<td class="cn" title="派洛">派洛</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Raiden">Raiden</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Ramhorn">Ramhorn</td>
+<td class="cn" title="钢钳">钢钳</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Ranger">Ranger</td>
+<td class="cn" title="游侠">游侠</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">日版隐者战士独有</td></tr>
+<tr class="auto">
+<td class="nm" title="Ranger (robot)">Ranger (robot)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Ratchet">Ratchet</td>
+<td class="cn" title="救护车">救护车</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Red Alert">Red Alert</td>
+<td class="cn" title="红色警报">红色警报</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Rewind">Rewind</td>
+<td class="cn" title="倒带">倒带</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Ricochet (Headmasters)">Ricochet (Headmasters)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Road King">Road King</td>
+<td class="cn" title="公路王">公路王</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">日版隐者战士独有</td></tr>
+<tr class="auto">
+<td class="nm" title="Road King (robot)">Road King (robot)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Roadbuster">Roadbuster</td>
+<td class="cn" title="路霸">路霸</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Roadfire">Roadfire</td>
+<td class="cn" title="路火">路火</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">日版地带独有</td></tr>
+<tr class="auto">
+<td class="nm" title="Rollbar">Rollbar</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Roller">Roller</td>
+<td class="cn" title="小滚珠">小滚珠</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">美版G1独有</td></tr>
+<tr class="auto">
+<td class="nm" title="Rung">Rung</td>
+<td class="cn" title="润格">润格</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Sandstorm">Sandstorm</td>
+<td class="cn" title="沙暴">沙暴</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Scamper">Scamper</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Scattershot">Scattershot</td>
+<td class="cn" title="机关炮">机关炮</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Searchlight">Searchlight</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Seaspray">Seaspray</td>
+<td class="cn" title="浪花">浪花</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Seizan">Seizan</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Sentinel Prime">Sentinel Prime</td>
+<td class="cn" title="御天敌">御天敌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Shouki">Shouki</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Sideswipe">Sideswipe</td>
+<td class="cn" title="横炮">横炮</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Silverbolt">Silverbolt</td>
+<td class="cn" title="银剑">银剑</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Sixknight">Sixknight</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Skids">Skids</td>
+<td class="cn" title="刹车">刹车</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Sky Lynx">Sky Lynx</td>
+<td class="cn" title="天猫">天猫</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Skydive (G1 Aerialbot)">Skydive (G1 Aerialbot)</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Slag">Slag</td>
+<td class="cn" title="铁渣">铁渣</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Slingshot">Slingshot</td>
+<td class="cn" title="弹弓">弹弓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Sludge">Sludge</td>
+<td class="cn" title="淤泥">淤泥</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Smokescreen">Smokescreen</td>
+<td class="cn" title="烟幕">烟幕</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Snarl">Snarl</td>
+<td class="cn" title="嚎叫">嚎叫</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Sonic Bomber">Sonic Bomber</td>
+<td class="cn" title="索尼克轰炸机">索尼克轰炸机</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Spoilsport">Spoilsport</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Springer">Springer</td>
+<td class="cn" title="弹簧">弹簧</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Star Saber">Star Saber</td>
+<td class="cn" title="皇者之剑">皇者之剑</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Steeljaw">Steeljaw</td>
+<td class="cn" title="犀牛">犀牛</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Strafe">Strafe</td>
+<td class="cn" title="钢鞭">钢鞭</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Streetwise">Streetwise</td>
+<td class="cn" title="大街">大街</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Suiken">Suiken</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Sunstreaker">Sunstreaker</td>
+<td class="cn" title="飞毛腿">飞毛腿</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Superion">Superion</td>
+<td class="cn" title="大无畏">大无畏</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Sureshot">Sureshot</td>
+<td class="cn" title="煞特">煞特</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Swerve">Swerve</td>
+<td class="cn" title="背离">背离</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Swoop">Swoop</td>
+<td class="cn" title="飞标">飞标</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Tailgate">Tailgate</td>
+<td class="cn" title="挡板">挡板</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Topspin">Topspin</td>
+<td class="cn" title="上旋">上旋</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Tote">Tote</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Tracks">Tracks</td>
+<td class="cn" title="轮胎">轮胎</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Trailbreaker">Trailbreaker</td>
+<td class="cn" title="开路先锋">开路先锋</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Turbofire">Turbofire</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Twin Twist">Twin Twist</td>
+<td class="cn" title="双钻">双钻</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Twincast">Twincast</td>
+<td class="cn" title="双履带">双履带</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">DW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Ultra Magnus">Ultra Magnus</td>
+<td class="cn" title="通天晓">通天晓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Velocity">Velocity</td>
+<td class="cn" title="极速">极速</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Victorion">Victorion</td>
+<td class="cn" title="胜利女神">胜利女神</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Victory Leo">Victory Leo</td>
+<td class="cn" title="胜利狮王">胜利狮王</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">日版胜利之斗争独有</td></tr>
+<tr class="auto">
+<td class="nm" title="Victory Saber">Victory Saber</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Warpath">Warpath</td>
+<td class="cn" title="战戟">战戟</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Wheelie">Wheelie</td>
+<td class="cn" title="转轮">转轮</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Wheeljack">Wheeljack</td>
+<td class="cn" title="千斤顶">千斤顶</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Whirl">Whirl</td>
+<td class="cn" title="旋刃">旋刃</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Wideload">Wideload</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Windblade">Windblade</td>
+<td class="cn" title="风刃">风刃</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td class="nt">IDW漫画原创</td></tr>
+<tr class="auto">
+<td class="nm" title="Windbreaker">Windbreaker</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Windcharger">Windcharger</td>
+<td class="cn" title="充电器">充电器</td>
+<td class="mk">✓</td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Wreck-Gar">Wreck-Gar</td>
+<td class="cn" title="营救车">营救车</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Yukikaze">Yukikaze</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Zeta Prime">Zeta Prime</td>
+<td class="cn" title="竞天择">竞天择</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Zetar">Zetar</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr>
+<tr class="auto">
+<td class="nm" title="Zetca">Zetca</td>
+<td class="cn" title=""></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="mk">✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="nt"></td></tr></tbody>
+</table>
+</div>
+
+<div class="footer">
+<p>⚡ TFWiki.net · 上译中文名 | MOV=大电影+第三季</p>
+<p>图例: ✓=出场 · 空白=未出场 · 鼠标悬停查看完整名称</p>
+</div>
+
+<script>
+document.getElementById("bodyWrap").addEventListener("scroll",function(){document.getElementById("headWrap").scrollLeft=this.scrollLeft});
+var COLS=["S1","S2","MOV","S4","HM","MF","V","Z","DW:TWW","DW:G1","DW:MM","IDW:AT","IDW:AHM","IDW:OG","IDW:LS","IDW:MT","IDW:RI","IDW:WB","IDW:LL","IDW:OP","IDW:UN","SB"];
+function filterTable(){
+var s=document.getElementById("search").value.toLowerCase();
+var f=document.getElementById("fFilter").value;
+var m=document.getElementById("mFilter").value;
+var trs=document.querySelectorAll("#bt tbody tr");
+var c=0;
+trs.forEach(function(r){
+var sh=true;
+if(s){var nm=r.querySelector(".nm").textContent.toLowerCase();var cn=r.querySelector(".cn").textContent.toLowerCase();if(nm.indexOf(s)===-1&&cn.indexOf(s)===-1)sh=false}
+if(f){var fc=f==="博派"?"auto":"dec";if(!r.classList.contains(fc))sh=false}
+if(m){var ci=COLS.indexOf(m);if(ci>=0){var tds=r.querySelectorAll("td");var cell=tds[ci+2];if(!cell||!cell.classList.contains("mk"))sh=false}}
+r.style.display=sh?"":"none";if(sh)c++
+});
+document.getElementById("stats").textContent="显示 "+c+" / 320 名角色";
+}
+</script>
+</body></html>
